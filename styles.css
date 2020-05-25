@@ -1,0 +1,15 @@
+body {
+    background-image: url("images/elijah-o-donnell-t8T_yUgCKSM-unsplash.jpg");
+
+    height: 2000px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#home-btn {
+    right: 20px;
+}
+
+#date-button {
+    text-align: center;
+}
