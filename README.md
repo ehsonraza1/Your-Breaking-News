@@ -2,6 +2,7 @@
 
 ## Description
 
+<<<<<<< HEAD
 Our project aims to bring you news in an objective fashion. Where users will be able to search for current events on our website and it will provide results from the whole political spectrum. In addition, to just the search functionality, users will have the option to utilize the same functionality for current news events for the day. The ultimate goal of our project is to break down political tribalism and introduce people to opposing point of views.
 
 We will be utilizing at a minimum of 3 APIs for publically available news sources, materialize CSS Framework [Materialize CSS](https://materializecss.com/) and github to host our website.
@@ -54,4 +55,10 @@ Test Case 2 - When I click on hyperlinks/Tags on top of the page for the current
 
 ---
 
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+# © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+# Ehson
+
+# Svitlana
+
+> > > > > > > 2a21e9fdc1c2aad3d88bbf83f793f2ba5f1d19e8
