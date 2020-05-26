@@ -1,15 +1,17 @@
-<<<<<<< HEAD
-$(document).ready(function () {
-  //alert("is JS file linked?");
-  //TODO Setup variabes here
-});
-=======
+// $(document).ready(function () {
+//     //alert("is JS file linked?");
+//     //TODO Setup variabes here
+// });
 console.log("js")
 var search = $("#search")
 var searchSubmit = $("#searchSubmit")
 var searchClear = $("#searchClear")
 
 var apiKey = "Wnzr87egH7NGFAHMg3rOj8yG4AgnCejd"
+
+// $(document).ready(function () {
+//     $('.datepicker').datepicker();
+// });
 
 
 searchSubmit.on("click", function (event) {
@@ -27,4 +29,3 @@ function getNYCarticles(val) {
         console.log(response);
     });
 }
->>>>>>> a44da65f373549a92fc0e72f6fe48cbc1ce96062
