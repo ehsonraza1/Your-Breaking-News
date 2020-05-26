@@ -8,10 +8,10 @@ var apiKey = "Wnzr87egH7NGFAHMg3rOj8yG4AgnCejd"
 
 searchSubmit.on("click", function (event) {
     console.log(search.val())
-    getNYTarticles(search.val())
+    getNYCarticles(search.val())
 })
 
-function getNYTarticles(val) {
+function getNYCarticles(val) {
     var queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${val}&api-key=${apiKey}`
     console.log(queryURL)
     $.ajax({
