@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+$(document).ready(function () {
+  //alert("is JS file linked?");
+  //TODO Setup variabes here
+});
+=======
 console.log("js")
 var search = $("#search")
 var searchSubmit = $("#searchSubmit")
@@ -21,3 +27,4 @@ function getNYTarticles(val) {
         console.log(response);
     });
 }
+>>>>>>> a44da65f373549a92fc0e72f6fe48cbc1ce96062
