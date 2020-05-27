@@ -3,7 +3,7 @@
 // This function takes an input with id "searchInput" object and listens to its change event.
 // After change, results.html is loaded
 function onWindowLoad() {
-    const awesomeinput = document.getElementById("searchInput");
+    const awesomeInput = document.getElementById("searchInput");
     if (awesomeInput) {
         awesomeInput.addEventListener("change", resultsHTML )
     }
