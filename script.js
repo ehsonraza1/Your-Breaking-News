@@ -10,6 +10,11 @@ $(document).ready(function () {
   var searchSubmit = $("#searchSubmit");
   var searchClear = $("#searchClear");
 
+
+  displayCurrentDate();
+
+
+
   //Jquery datePicker function to generate a plugin calendar
   var startDate = $("#beginDate").datepicker();
   var endDate = $("#endDate").datepicker();
@@ -21,6 +26,14 @@ $(document).ready(function () {
     getBingNews(search.val());
   });
 });
+
+function displayCurrentDate() {
+  let date = new Date();
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  document.getElementById("date").innerHTML = `${month}/${day}/${year}`;
+}
 
 function getHoaxyNews(val) {
   var settings = {
