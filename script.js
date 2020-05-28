@@ -43,23 +43,28 @@ function getBingNews(val) {
   var settings = {
     async: true,
     crossDomain: true,
-    url: `https://microsoft-azure-bing-news-search-v1.p.rapidapi.com/?q=${val}`,
+    url: `https://bing-news-search1.p.rapidapi.com/news/search?freshness=Day&textFormat=Raw&safeSearch=Off&q=${val}`,
     method: "GET",
     headers: {
-      "x-rapidapi-host": "microsoft-azure-bing-news-search-v1.p.rapidapi.com",
-      "x-rapidapi-key": "0deb5d185fmshde18b9f954e9815p1515bcjsnf6dbc546835f",
+      "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
+      "x-rapidapi-key": "ba818755cbmsh04c0fc93108fdcfp1d4799jsnc7dce26e4a9f",
+      "x-bingapis-sdk": "true",
     },
   };
 
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-    var cardData = {
-      url: response.value[0].url,
-      description: response.value[0].description,
-      title: response.value[0].name,
-    };
-    $news.append($.parseHTML(generateCard(cardData)));
-  });
+  $.ajax(settings)
+    .done(function (response) {
+      console.log(response);
+      var cardData = {
+        url: response.value[0].url,
+        description: response.value[0].description,
+        title: response.value[0].name,
+      };
+      $news.append($.parseHTML(generateCard(cardData)));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
 
 function getNYTarticles(val) {
@@ -91,29 +96,30 @@ function populateNYTButtons() {
     populateBreakingNews(docs);
   });
 }
-function generateCard(Banana) {
+function generateCard(cardData) {
   //Sample Bana Object structure
-  //   var Banana = {
+  //   var cardData = {
   //     url: "abc",
   //     description: "efg",
   //     title: "hij",
   //   };
-
+  //TODO Dynamically generated HTML for News Cards
   var template = `<div class="col s12 m6">
                 <div class="card">
                     <div class="card-content">
-                        <span class="card-title">${Banana.title}</span>
-                        <p>${Banana.description}</p>
+                        <span class="card-title">${cardData.title}</span>
+                        <p>${cardData.description}</p>
                     </div>
                     <div class="card-action">
-                        <a href="${Banana.url}">Read more</a>
+                        <a href="${cardData.url}">Read more</a>
                     </div>
                 </div>
             </div>`;
   return template;
 }
 function populateBreakingNews(docs) {
-  for (var i = 0; i < docs.length; i++) {
+  for (var i = 0; i < 6; i++) {
+    // TODO Dynamically generated HTML for Breaking News Buttons
     var newHeadLine = $("<a>");
     newHeadLine.addClass(
       "waves-effect waves-light waves-effect btn btn-large indigo"
