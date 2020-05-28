@@ -59,12 +59,23 @@ Test Case 2 - When I click on hyperlinks/Tags on top of the page for the current
 
 ## Notes on presentaion requirements from class on Wednesday, May 27th.
 
-We will give 10 minute presentation of our website (no Powerpoin presentations). We need to show functionaluty and convey to our audience why our product is better than other and why.
-Main things to focus on:
-* features of our project;
-* future development;
+We will give 10 minute long (total for the group) presentation of our projec. No Powerpoin presentations, run demo.  We need to show functionaluty and convey to our audience why our product is better than other similar websites and why.
+
+Questions we need to answer:
+1. What's so special about our project?
+2. Why they should want our news site?
+3. What kind of problem we solved with our website? 
+4. Don't tell what we didn't do. Tell what we want to improve (future development). 
+5. Sell them on our idea. 
 
 
+Main things to focus on (it's all in project requirements):
+Oveall, pitch like we are pitching a product. 
+* features of our project, no talks about algoritm, don't go too technical;
+* setbacks, problems and challenges we had;
+* future development (personalized news feed? subscription? something else??);
+
+Questions during presentaion (see questions we need to answer above).
 
 
 
