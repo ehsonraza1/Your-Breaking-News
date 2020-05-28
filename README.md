@@ -57,20 +57,23 @@ Test Case 1 - When I search for article in the search box, I should atleast get 
 
 Test Case 2 - When I click on hyperlinks/Tags on top of the page for the current events, the website should show 3 news article results from 3 different news sources
 
----
+## Notes on presentaion requirements from class on Wednesday, May 27th.
 
-<<<<<<< HEAD
+We will give 10 minute presentation of our website (no Powerpoin presentations). We need to show functionaluty and convey to our audience why our product is better than other and why.
+Main things to focus on:
+* features of our project;
+* future development;
+
+
+
+
+
 # © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
-# Ehson
-
-# Svitlana
 
 > > > > > > > 2a21e9fdc1c2aad3d88bbf83f793f2ba5f1d19e8
 =======
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
-#Ehson
-# Svitlana
 
 >>>>>>> 46c9f51cb32ac537ec34c07690df9a79bbfe03ec
