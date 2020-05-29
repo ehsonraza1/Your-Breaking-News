@@ -2,41 +2,51 @@ var apiKey = "Wnzr87egH7NGFAHMg3rOj8yG4AgnCejd";
 
 var rapidApiKey = "0deb5d185fmshde18b9f954e9815p1515bcjsnf6dbc546835f";
 var $news = $("#newsTemplate");
+
+//Cleares the search field 
+function clearSearch(){
+  $("#search").val("");
+}
+
+function addClearSearchEventListeners() {
+  $("#searchClear").on("click", clearSearch);
+  $("#clearSearchIcon").on("click", clearSearch);
+}
+
 $(document).ready(function () {
-  //TODO Setup variabes here
-
-  console.log("js");
-  var search = $("#search");
-  var searchSubmit = $("#searchSubmit");
-  var searchClear = $("#searchClear");
-
+  const searchSubmit = $("#searchSubmit");
 
   displayCurrentDate();
 
+  addClearSearchEventListeners();
 
-
-  //Jquery datePicker function to generate a plugin calendar
-  var startDate = $("#beginDate").datepicker();
-  var endDate = $("#endDate").datepicker();
   populateNYTButtons();
+
+
   searchSubmit.on("click", function (event) {
-    console.log(search.val());
+    const search = $("#search");
     getNYTarticles(search.val());
     getHoaxyNews(search.val());
     getBingNews(search.val());
   });
 });
 
+// Displays current date on the page
 function displayCurrentDate() {
-  let date = new Date();
-  let year = date.getFullYear();
-  let month = date.getMonth() + 1;
-  let day = date.getDate();
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
   document.getElementById("date").innerHTML = `${month}/${day}/${year}`;
 }
 
+//Jquery datePicker function to generate a plugin calendar
+  // var startDate = $("#beginDate").datepicker();
+  // var endDate = $("#endDate").datepicker();
+
+//Searches Hoaxy news articles for keywords from user input search field
 function getHoaxyNews(val) {
-  var settings = {
+  const settings = {
     async: true,
     crossDomain: true,
     url: `https://api-hoaxy.p.rapidapi.com/articles?sort_by=relevant&use_lucene_syntax=true&query=${val}`,
@@ -48,12 +58,28 @@ function getHoaxyNews(val) {
   };
 
   $.ajax(settings).done(function (response) {
-    console.log(response);
+    console.log("Hoaxy API response", response);
+    if (response.articles.length > 0) {
+      const mostPopular = response.articles[0];
+      const description = `Published by ${mostPopular.domain}, ${mostPopular.number_of_tweets} retweets.`
+      const cardData = {
+        url: mostPopular.url,
+        description: `Most popular article from Hoaxy API: ${description}`,
+        title: mostPopular.title,
+      };
+      $news.append($.parseHTML(generateCard(cardData)));
+    }
+  })
+  .catch(function (error) {
+    console.log(error); 
+    //Adding cards(above)
   });
 }
 
+
+//Searches Bing news articles for keywords from user input search field
 function getBingNews(val) {
-  var settings = {
+  const settings = {
     async: true,
     crossDomain: true,
     url: `https://bing-news-search1.p.rapidapi.com/news/search?freshness=Day&textFormat=Raw&safeSearch=Off&q=${val}`,
@@ -65,10 +91,9 @@ function getBingNews(val) {
     },
   };
 
-  $.ajax(settings)
-    .done(function (response) {
-      console.log(response);
-      var cardData = {
+  $.ajax(settings).done(function (response) {
+      console.log("Bing response", response);
+      const cardData = {
         url: response.value[0].url,
         description: response.value[0].description,
         title: response.value[0].name,
@@ -80,16 +105,17 @@ function getBingNews(val) {
     });
 }
 
+
+//Searches NYTimes articles for keywords from user input search field
 function getNYTarticles(val) {
-  var queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${val}&api-key=${apiKey}`;
-  console.log(queryURL);
+  const queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${val}&api-key=${apiKey}`;
   $.ajax({
     url: queryURL,
     method: "GET",
   }).then(function (data) {
-    console.log(data);
-    var docs = data.response.docs;
-    var cardData = {
+    console.log("NY times response", data);
+    const docs = data.response.docs;
+    const cardData = {
       url: docs[0].web_url,
       description: docs[0].snippet,
       title: docs[0].headline.main,
@@ -97,18 +123,23 @@ function getNYTarticles(val) {
     $news.append($.parseHTML(generateCard(cardData)));
   });
 }
+
+
+
 function populateNYTButtons() {
-  var queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${apiKey}`;
+  const queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${apiKey}`;
   console.log(queryURL);
   $.ajax({
     url: queryURL,
     method: "GET",
   }).then(function (data) {
     console.log(data);
-    var docs = data.response.docs;
+    const docs = data.response.docs;
     populateBreakingNews(docs);
   });
 }
+
+
 function generateCard(cardData) {
   //Sample Bana Object structure
   //   var cardData = {
@@ -117,7 +148,7 @@ function generateCard(cardData) {
   //     title: "hij",
   //   };
   //TODO Dynamically generated HTML for News Cards
-  var template = `<div class="col s12 m6">
+  const template = `<div class="col s12 m6">
                 <div class="card">
                     <div class="card-content">
                         <span class="card-title">${cardData.title}</span>
@@ -130,18 +161,20 @@ function generateCard(cardData) {
             </div>`;
   return template;
 }
+
+
 function populateBreakingNews(docs) {
   for (var i = 0; i < 9; i++) {
     // TODO Dynamically generated HTML for Breaking News Buttons
-    var newHeadLine = $("<a>");
+    const newHeadLine = $("<a>");
     newHeadLine.addClass(
-      "waves-effect waves-light waves-effect btn btn-large transparent"
+      "waves-effect waves-light btn-large transparent"
     );
     newHeadLine.attr("href", docs[i].web_url);
     newHeadLine.text(docs[i].headline.main.slice(0, 25) + "...");
     $("#headLine").append(newHeadLine);
 
-    console.log(docs[i]);
+    // console.log(docs[i]);
   }
 
   //Adding to the html
