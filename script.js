@@ -1,7 +1,7 @@
 var apiKey = "Wnzr87egH7NGFAHMg3rOj8yG4AgnCejd";
-
 var rapidApiKey = "0deb5d185fmshde18b9f954e9815p1515bcjsnf6dbc546835f";
-var $news = $("#newsTemplate");
+
+const newsResultsArea = $("#newsResultsArea");
 
 //Cleares the search field 
 function clearSearch(){
@@ -13,22 +13,30 @@ function addClearSearchEventListeners() {
   $("#clearSearchIcon").on("click", clearSearch);
 }
 
+function performSearch () {
+  const textToSearch = $("#search").val();
+  console.log("Text to search", textToSearch)
+  getNYTarticles(textToSearch);
+  getHoaxyNews(textToSearch);
+  getBingNews(textToSearch);
+}
+
+function onPressEnter(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    performSearch();
+  }
+}
+
 $(document).ready(function () {
-  const searchSubmit = $("#searchSubmit");
-
   displayCurrentDate();
-
   addClearSearchEventListeners();
 
   populateNYTButtons();
 
+  $("#searchSubmit").on("click", performSearch);
 
-  searchSubmit.on("click", function (event) {
-    const search = $("#search");
-    getNYTarticles(search.val());
-    getHoaxyNews(search.val());
-    getBingNews(search.val());
-  });
+  $('#search').on('keypress', onPressEnter);
 });
 
 // Displays current date on the page
@@ -67,7 +75,7 @@ function getHoaxyNews(val) {
         description: `Most popular article from Hoaxy API: ${description}`,
         title: mostPopular.title,
       };
-      $news.append($.parseHTML(generateCard(cardData)));
+      newsResultsArea.append($.parseHTML(generateCard(cardData)));
     }
   })
   .catch(function (error) {
@@ -98,7 +106,7 @@ function getBingNews(val) {
         description: response.value[0].description,
         title: response.value[0].name,
       };
-      $news.append($.parseHTML(generateCard(cardData)));
+      newsResultsArea.append($.parseHTML(generateCard(cardData)));
     })
     .catch(function (error) {
       console.log(error);
@@ -120,7 +128,7 @@ function getNYTarticles(val) {
       description: docs[0].snippet,
       title: docs[0].headline.main,
     };
-    $news.append($.parseHTML(generateCard(cardData)));
+    newsResultsArea.append($.parseHTML(generateCard(cardData)));
   });
 }
 
