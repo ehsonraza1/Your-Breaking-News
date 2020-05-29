@@ -17,20 +17,10 @@
     <!-- Materialize JavaScript cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="script.js"></script> -->
+
 </head>
 
-<body> {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 10vw 30vw 10vw;
-    grid-gap: 1em;
-  }
-
-    header,
-    footer {
-     grid-column: 1 / span 5;
-    }
+<body>
 
     
     <div class="row">
@@ -43,8 +33,9 @@
             <!-- <a href="./home.html" class="waves-effect waves-light waves-effect btn btn-medium indigo right"
                 id="home-btn">Home</a> -->
             <!-- <p class="waves-effect waves-light btn left" id="date"></p> -->
-            <div class="card blue-grey darken-1 left">
-                <div class="card-content white-text">
+            <div class="transparent left grid-example col s12 m6"><span class="flow-text"></span>
+
+                <div class="red-text">
                     <span id="date"></span>
                 </div>
             </div>
@@ -52,7 +43,7 @@
 
         <h3 class="white-text">Daily News</h3>
         <div class="row">
-            <div class="col l12  s6" id="headLine">
+            <div class="col l12  s6 m6 " id="headLine">
                 <!-- <a class="waves-effect waves-light waves-effect btn btn-large indigo" href="#">Headline1</a>
                 <a class="waves-effect waves-light waves-effect btn btn-large indigo" href="#"> Headline2</a>
                 <a class="waves-effect waves-light waves-effect btn btn-large indigo" href="#">Headline3</a>

@@ -4,6 +4,7 @@ body {
   /* height: 2000px; */
   background-size: cover;
   background-repeat: no-repeat;
+  
 }
 
 #home-btn {
@@ -12,4 +13,10 @@ body {
 
 #date-button {
   text-align: center;
+}
+
+
+h1, h2, h3 {
+  font-weight: 500;
+  font-style: oblique 4deg;
 }
