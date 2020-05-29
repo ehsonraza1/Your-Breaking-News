@@ -43,9 +43,6 @@ List of collaborators
   [PlaceHolder](https://google.com/)
   [PlaceHolder](https://google.com/)
 
-## License
-
-PlaceHolder [https://choosealicense.com/](https://choosealicense.com/)
 
 ## Contributing
 
@@ -53,9 +50,9 @@ This application is for educational purposes only and does not support contribut
 
 ## Tests
 
-Test Case 1 - When I search for article in the search box, I should atleast get 3 News results for 3 different news sources
+Test Case 1 - When I search for article in the search box, I should atleast get 3 News results for 3 different news sources.
 
-Test Case 2 - When I click on hyperlinks/Tags on top of the page for the current events, the website should show 3 news article results from 3 different news sources
+Test Case 2 - When I click on hyperlinks/tags on top of the page for the current events, the website should show 3 news article results from 3 different news sources.
 
 
 
@@ -63,7 +60,7 @@ Test Case 2 - When I click on hyperlinks/Tags on top of the page for the current
 
 
 > > > > > > > 2a21e9fdc1c2aad3d88bbf83f793f2ba5f1d19e8
-=======
+
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
 
