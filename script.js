@@ -172,14 +172,14 @@ function generateCard(cardData) {
 
 
 function populateBreakingNews(docs) {
-  for (var i = 0; i < 9; i++) {
+  for (var i = 0; i < 6; i++) {
     // TODO Dynamically generated HTML for Breaking News Buttons
     const newHeadLine = $("<a>");
     newHeadLine.addClass(
       "waves-effect waves-light btn-large transparent"
     );
     newHeadLine.attr("href", docs[i].web_url);
-    newHeadLine.text(docs[i].headline.main.slice(0, 25) + "...");
+    newHeadLine.text(docs[i].headline.main.slice(0, 30) + "...");
     $("#headLine").append(newHeadLine);
 
     // console.log(docs[i]);
