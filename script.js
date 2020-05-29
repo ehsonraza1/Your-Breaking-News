@@ -131,11 +131,11 @@ function generateCard(cardData) {
   return template;
 }
 function populateBreakingNews(docs) {
-  for (var i = 0; i < 6; i++) {
+  for (var i = 0; i < 9; i++) {
     // TODO Dynamically generated HTML for Breaking News Buttons
     var newHeadLine = $("<a>");
     newHeadLine.addClass(
-      "waves-effect waves-light waves-effect btn btn-large indigo"
+      "waves-effect waves-light waves-effect btn btn-large transparent"
     );
     newHeadLine.attr("href", docs[i].web_url);
     newHeadLine.text(docs[i].headline.main.slice(0, 25) + "...");
@@ -145,10 +145,10 @@ function populateBreakingNews(docs) {
   }
 
   //Adding to the html
-  var newHeadLine = $("<a>");
-  newHeadLine.addClass(
-    "waves-effect waves-light waves-effect btn btn-large indigo"
-  );
-  newHeadLine.attr("id", "articleSection");
-  $("#headLine").append(newHeadLine);
+  // var newHeadLine = $("<a>");
+  // newHeadLine.addClass(
+  //   "waves-effect waves-light waves-effect btn btn-large indigo"
+  // );
+  // newHeadLine.attr("id", "articleSection");
+  // $("#headLine").append(newHeadLine);
 }
