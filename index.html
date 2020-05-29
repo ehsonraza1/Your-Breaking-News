@@ -34,23 +34,18 @@
                 id="home-btn">Home</a> -->
             <!-- <p class="waves-effect waves-light btn left" id="date"></p> -->
             <div class="transparent left grid-example col s12 m6"><span class="flow-text"></span>
-
                 <div class="red-text">
                     <span id="date"></span>
                 </div>
             </div>
         </div>
 
-        <h3 class="white-text">Daily News</h3>
+        <h3 class="white-text">Breaking News</h3>
         <div class="row">
-            <div class="col l12  s6 m6 " id="headLine">
-                <!-- <a class="waves-effect waves-light waves-effect btn btn-large indigo" href="#">Headline1</a>
-                <a class="waves-effect waves-light waves-effect btn btn-large indigo" href="#"> Headline2</a>
-                <a class="waves-effect waves-light waves-effect btn btn-large indigo" href="#">Headline3</a>
-                <a class="waves-effect waves-light waves-effect btn btn-large indigo" href="#">Headline4</a>
-                <a class="waves-effect waves-light waves-effect btn btn-large indigo" href="#">Headline5</a> -->
+            <div class="col l3 s6 m6 " id="headLine">
             </div>
         </div>
+
 
         <div class="row">
             <div class="col s8"><span class="flow-text"></span>
@@ -62,7 +57,7 @@
                                 <label for="search" class="label-icon">
                                     <i class="material-icons">search</i>
                                 </label>
-                                <i class="material-icons">close</i>
+                                <i class="material-icons red-text" id="clearSearchIcon">close</i>
                             </div>
                         </form>
                     </div>
@@ -78,11 +73,11 @@
         </div>
 
         <div class="row">
-            <button class="waves-effect waves-light waves-effect btn btn-large indigo" id="searchSubmit">submit</button>
-            <button class="waves-effect waves-light waves-effect btn btn-large indigo" id="searchClear">clear</button>
+            <button class="waves-effect waves-light waves-effect btn btn-large red-text transparent" id="searchSubmit">submit</button>
+            <button class="waves-effect waves-light waves-effect btn btn-large white-text transparent" id="searchClear">clear</button>
         </div>
 
-        <div id="newsTemplate" class="row">
+        <!-- <div id="newsTemplate" class="row"> -->
             <!-- <div class="col s12 m6">
                 <div class="card">
                     <div class="card-content">
