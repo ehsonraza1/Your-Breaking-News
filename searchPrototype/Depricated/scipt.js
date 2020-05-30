@@ -15,6 +15,7 @@ function addClearSearchEventListeners() {
 
 function performSearch() {
   const textToSearch = $("#search").val();
+  console.log("Text to search", textToSearch);
   getNYTarticles(textToSearch);
   getHoaxyNews(textToSearch);
   getBingNews(textToSearch);
@@ -66,6 +67,7 @@ function getHoaxyNews(val) {
 
   $.ajax(settings)
     .done(function (response) {
+      console.log("Hoaxy API response", response);
       if (response.articles.length > 0) {
         const mostPopular = response.articles[0];
         const description = `Published by ${mostPopular.domain}, ${mostPopular.number_of_tweets} retweets.`;
@@ -78,6 +80,7 @@ function getHoaxyNews(val) {
       }
     })
     .catch(function (error) {
+      console.log(error);
       //Adding cards(above)
     });
 }
@@ -98,6 +101,7 @@ function getBingNews(val) {
 
   $.ajax(settings)
     .done(function (response) {
+      console.log("Bing response", response);
       const cardData = {
         url: response.value[0].url,
         description: response.value[0].description,
@@ -105,7 +109,9 @@ function getBingNews(val) {
       };
       newsResultsArea.append($.parseHTML(generateCard(cardData)));
     })
-    .catch(function (error) {});
+    .catch(function (error) {
+      console.log(error);
+    });
 }
 
 //Searches NYTimes articles for keywords from user input search field
@@ -115,6 +121,7 @@ function getNYTarticles(val) {
     url: queryURL,
     method: "GET",
   }).then(function (data) {
+    console.log("NY times response", data);
     const docs = data.response.docs;
     const cardData = {
       url: docs[0].web_url,
@@ -127,17 +134,25 @@ function getNYTarticles(val) {
 
 function populateNYTButtons() {
   const queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${apiKey}`;
-
+  console.log(queryURL);
   $.ajax({
     url: queryURL,
     method: "GET",
   }).then(function (data) {
+    console.log(data);
     const docs = data.response.docs;
     populateBreakingNews(docs);
   });
 }
 
 function generateCard(cardData) {
+  //Sample Bana Object structure
+  //   var cardData = {
+  //     url: "abc",
+  //     description: "efg",
+  //     title: "hij",
+  //   };
+  //TODO Dynamically generated HTML for News Cards
   const template = `<div class="col s12 m6">
                 <div class="card">
                     <div class="card-content">
@@ -154,10 +169,21 @@ function generateCard(cardData) {
 
 function populateBreakingNews(docs) {
   for (var i = 0; i < 6; i++) {
+    // TODO Dynamically generated HTML for Breaking News Buttons
     const newHeadLine = $("<a>");
     newHeadLine.addClass("waves-effect waves-light btn-large transparent");
     newHeadLine.attr("href", docs[i].web_url);
     newHeadLine.text(docs[i].headline.main.slice(0, 30) + "...");
     $("#headLine").append(newHeadLine);
+
+    // console.log(docs[i]);
   }
+
+  //Adding to the html
+  // var newHeadLine = $("<a>");
+  // newHeadLine.addClass(
+  //   "waves-effect waves-light waves-effect btn btn-large indigo"
+  // );
+  // newHeadLine.attr("id", "articleSection");
+  // $("#headLine").append(newHeadLine);
 }
