@@ -1,7 +1,5 @@
 # Project 1
 
-
-
 ## Project Proposal
 1. Create the Github Repo per instructions in Activity 1 & Activity 2
     - The master branch of the repo must be protected
@@ -19,19 +17,44 @@
    Add a section below developers called Technologies
    List the APIs, CSS Framework you plan on using
 
+## Our Project Proposal
+========================================================================
+Our project aims to bring you news in an objective fashion. Where users will be able to search for current events on our website and it will provide results from the whole political spectrum. In addition, to just the search functionality, users will have the option to utilize the same functionality for current news events for the day. The ultimate goal of our project is to break down political tribalism and introduce people to opposing point of views.
+======================================================================
+
+
 
 ## Notes on presentaion requirements from class on Wednesday, May 27th.
 
 We will give 10 minute long (total for the group) presentation of our projec. No Powerpoin presentations, run demo.  We need to show functionaluty and convey to our audience why our product is better than other similar websites and why.
 
+
+
+===============================================================
 Questions we need to answer:
 1. What's so special about our project?
+
+
+
+
 2. Why they should want our news site?
+
+
+
 3. What kind of problem we solved with our website? 
+
+
+
 4. Don't tell what we didn't do. Tell what we want to improve (future development). 
+
+
+
 5. Sell them on our idea. 
 
 
+
+
+=================================================================
 Main things to focus on (it's all in project requirements):
 Oveall, pitch like we are pitching a product. 
 * features of our project, no talks about algoritm, don't go too technical;
@@ -47,9 +70,15 @@ ________________________________________________________________________________
     -   Make me want to use your application even if I don't need it
 
 -   Concept:
+===========================
 -   What is your user story?
 
+    
+
+
+
 -   Who is our target audience? 
+
 
 
 -   What was your motivation for development?
