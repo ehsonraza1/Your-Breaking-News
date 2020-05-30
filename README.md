@@ -2,12 +2,7 @@
 
 ## Description
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-> > > > > > > 46c9f51cb32ac537ec34c07690df9a79bbfe03ec
-> > > > > > > Our project aims to bring you news in an objective fashion. Where users will be able to search for current events on our website and it will provide results from the whole political spectrum. In addition, to just the search functionality, users will have the option to utilize the same functionality for current news events for the day. The ultimate goal of our project is to break down political tribalism and introduce people to opposing point of views.
+Our project aims to bring you news in an objective fashion. Where users will be able to search for current events on our website and it will provide results from the whole political spectrum. In addition, to just the search functionality, users will have the option to utilize the same functionality for current news events for the day. The ultimate goal of our project is to break down political tribalism and introduce people to opposing point of views.
 
 We will be utilizing at a minimum of 3 APIs for publically available news sources, materialize CSS Framework [Materialize CSS](https://materializecss.com/) and github to host our website.
 
@@ -38,10 +33,11 @@ List of collaborators
 - [Ehson Raza](https://github.com/ehsonraza1)
 
   Third-party assets:
-  [Materialize CSS](https://materializecss.com/)
-  [NY Times API](https://api.nytimes.com/svc/search/v2/articlesearch.json?q=)
-  [Bing News Search](https://google.com/)
-  [Hoaxy API](https://google.com/)
+
+  - [Materialize CSS](https://materializecss.com/)
+  - [NY Times API](https://api.nytimes.com/svc/search/v2/articlesearch.json?q=)
+  - [Bing News Search](https://google.com/)
+  - [Hoaxy API](https://google.com/)
 
 ## Contributing
 
@@ -54,9 +50,3 @@ Test Case 1 - When I search for article in the search box, I should atleast get 
 Test Case 2 - When I click on hyperlinks/tags on top of the page for the current events, the website should show 3 news article results from 3 different news sources.
 
 # © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
-> > > > > > > 2a21e9fdc1c2aad3d88bbf83f793f2ba5f1d19e8
-
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
-> > > > > > > 46c9f51cb32ac537ec34c07690df9a79bbfe03ec
