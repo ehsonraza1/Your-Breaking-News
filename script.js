@@ -156,6 +156,7 @@ function populateBreakingNews(docs) {
   for (var i = 0; i < 6; i++) {
     const newHeadLine = $("<a>");
     newHeadLine.addClass("waves-effect waves-light btn-large transparent");
+    //newHeadLine.attr("id", "newsButtons");
     newHeadLine.attr("href", docs[i].web_url);
     newHeadLine.text(docs[i].headline.main.slice(0, 30) + "...");
     $("#headLine").append(newHeadLine);
