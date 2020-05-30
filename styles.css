@@ -1,12 +1,6 @@
 body {
 
-  font-family: Arial, Helvetica, sans-serif; background:black;
-  font-weight: 100;
-  font-style: oblique 45deg; 
-
-
   background-image: url("images/burning-paper.jpg");
-  /* background-size: contain; */
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -17,16 +11,6 @@ body {
   top: 0;
   left: 0;
   background-repeat: no-repeat;
-
-
-
-  /* height: 100% 100%; */
-  /* background-size: 100%; */
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; */
-  
-  
 }
 
 
@@ -42,7 +26,14 @@ body {
 }
 
 
- h1, h2, h3, h4 {
-  font-weight: 500;
-  font-style: oblique 4deg;
- }  
+h1,
+h4 {
+  font-family: 'Special Elite', cursive;
+
+
+}
+
+h2,
+h3 {
+  font-family: 'Merriweather', serif;
+}
