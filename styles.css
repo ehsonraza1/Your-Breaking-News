@@ -1,9 +1,11 @@
 body {
-
   background-image: url("images/burning-paper.jpg");
-  background-size: cover;
-  height: 100%;
-  width: 100%;
+  /* background-size: cover; */
+  /* change background-size to cover and delete 50% to revert the changes */
+  background-size: 50%;
+  background-color: #151616;
+  /* height: 100%;
+  width: 100%; */
   /* overflow: hidden; */
   min-width: 100%;
   min-height: 100%;
@@ -13,9 +15,11 @@ body {
   background-repeat: no-repeat;
 }
 
-
-
-
+#date {
+  /* font-family: "Special Elite", cursive; */
+  font-family: "Merriweather", serif;
+  font-size: larger;
+}
 
 #home-btn {
   right: 20px;
@@ -25,15 +29,12 @@ body {
   text-align: center;
 }
 
-
 h1,
 h4 {
-  font-family: 'Special Elite', cursive;
-
-
+  font-family: "Special Elite", cursive;
 }
 
 h2,
 h3 {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
