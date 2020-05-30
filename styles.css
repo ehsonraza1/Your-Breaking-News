@@ -3,7 +3,7 @@ body {
   /* background-size: cover; */
   /* change background-size to cover and delete 50% to revert the changes */
   background-size: 50%;
-  background-color: #151616;
+  background-color: #0e0d0d;
   /* height: 100%;
   width: 100%; */
   /* overflow: hidden; */
@@ -15,6 +15,9 @@ body {
   background-repeat: no-repeat;
 }
 
+/* #headLine {
+  background-color: rgba(255, 255, 255, 0.5);
+} */
 #date {
   /* font-family: "Special Elite", cursive; */
   font-family: "Merriweather", serif;
