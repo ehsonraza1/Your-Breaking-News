@@ -49,4 +49,3 @@ Test Case 1 - When I search for article in the search box, I should atleast get 
 
 Test Case 2 - When I click on hyperlinks/tags on top of the page for the current events, the website should show 3 news article results from 3 different news sources.
 
-# © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
