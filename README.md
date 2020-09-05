@@ -15,7 +15,7 @@ We will be utilizing at a minimum of 3 APIs for publically available news source
 
 ## Installation
 
-Navigate to the website [Middle Ground](https://szaster.github.io/Project1/).
+Navigate to the website [Middle Ground](https://szaster.github.io/Your-Breaking-News/).
 
 ## Usage
 
@@ -41,7 +41,7 @@ List of collaborators
 
 ## Contributing
 
-This application is for educational purposes, please refer to the LICENSE tab and [Github](https://github.com/szaster/Project1) for further information related to use and collaboration.
+This application is for educational purposes, please refer to the LICENSE tab and [Github](https://szaster.github.io/Your-Breaking-News/) for further information related to use and collaboration.
 
 ## Tests
 
@@ -49,4 +49,4 @@ Test Case 1 - When I search for article in the search box, I should atleast get 
 
 Test Case 2 - When I click on hyperlinks/tags on top of the page for the current events, the website should show 3 news article results from 3 different news sources.
 
-# © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
